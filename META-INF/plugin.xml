@@ -33,12 +33,12 @@
   </project-components>
 
   <actions>
-      <action id="mocksocks" class="com.dianping.idea.MocksocksAction" text="mocksocks" icon="/icons/dianping.png">
+      <action id="mocksocks" class="com.dianping.idea.mocksocks.MocksocksAction" text="mocksocks" icon="/icons/dianping.png">
           <add-to-group group-id="MainToolBar" anchor="last"></add-to-group>
       </action>
   </actions>
 
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
+     <java.programPatcher implementation="com.dianping.idea.mocksocks.MocksocksRunPatcher"/>
   </extensions>
 </idea-plugin>

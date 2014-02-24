@@ -1,4 +1,4 @@
-package com.dianping.idea;
+package com.dianping.idea.mocksocks;
 
 import com.dianping.mocksocks.gui.gui.Main;
 import com.intellij.openapi.actionSystem.AnAction;
@@ -12,5 +12,6 @@ public class MocksocksAction extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent e) {
         Main.main(null);
+        System.out.println("shutdown");
     }
 }
