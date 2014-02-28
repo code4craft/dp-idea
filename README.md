@@ -1,7 +1,7 @@
 DP-IDEA
 =====
 
-为点评中间件定制的Intellij插件！
+为点评定制的Intellij插件！
 
 ## 安装：
 
