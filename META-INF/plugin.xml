@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>dp-idea</id>
   <name>dp-idea</name>
-  <version>1.0</version>
+  <version>0.0.1-alpha</version>
   <vendor email="yihua.huang@dianping.com" url="http://www.dianping.com">大众点评</vendor>
 
   <description><![CDATA[
@@ -10,7 +10,7 @@
       ]]></description>
 
   <change-notes><![CDATA[
-      v 0.0.1 增加mocksocks，后端抓包工具。<br>
+      v 0.0.1-alpha 增加mocksocks，后端抓包工具。<br>
       ]]>
   </change-notes>
 
