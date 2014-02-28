@@ -11,11 +11,11 @@ import com.intellij.execution.runners.JavaProgramPatcher;
  */
 public class MocksocksRunPatcher extends JavaProgramPatcher {
 
-	private boolean proxyOn = true;
+    private MocksocksConfig mocksocksConfig = MocksocksConfig.instance();
 
 	@Override
 	public void patchJavaParameters(Executor executor, RunProfile configuration, JavaParameters javaParameters) {
-		if (proxyOn) {
+        if (mocksocksConfig.isProxyOn()) {
 			ParametersList vmParametersList = javaParameters.getVMParametersList();
 			vmParametersList
 					.add("-javaagent:/usr/local/mocksocks/client.jar");
