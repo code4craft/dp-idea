@@ -5,6 +5,9 @@ import com.intellij.execution.configurations.JavaParameters;
 import com.intellij.execution.configurations.ParametersList;
 import com.intellij.execution.configurations.RunProfile;
 import com.intellij.execution.runners.JavaProgramPatcher;
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.File;
 
 /**
  * @author yihua.huang@dianping.com
@@ -13,14 +16,15 @@ public class MocksocksRunPatcher extends JavaProgramPatcher {
 
     private MocksocksConfig mocksocksConfig = MocksocksConfig.instance();
 
-	@Override
-	public void patchJavaParameters(Executor executor, RunProfile configuration, JavaParameters javaParameters) {
+    @Override
+    public void patchJavaParameters(Executor executor, RunProfile configuration, JavaParameters javaParameters) {
         if (mocksocksConfig.isProxyOn()) {
-			ParametersList vmParametersList = javaParameters.getVMParametersList();
-			vmParametersList
-					.add("-javaagent:/usr/local/mocksocks/client.jar");
-			vmParametersList
-					.add("-DmockFile=/usr/local/mocksocks/client.jar");
-		}
-	}
+            String clientJarPath = StringUtils.join(new String[]{System.getProperty("idea.plugins.path"), "dp-idea", "lib", "mocksocks-client.jar"}, File.separator);
+            ParametersList vmParametersList = javaParameters.getVMParametersList();
+            vmParametersList
+                    .add("-javaagent:" + clientJarPath);
+            vmParametersList
+                    .add("-DmockFile=" + clientJarPath);
+        }
+    }
 }
