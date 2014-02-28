@@ -14,20 +14,15 @@ public class MocksocksAction extends AnAction {
 
     private MocksocksConfig mocksocksConfig = MocksocksConfig.instance();
 
-    private volatile MocksocksDashboard mocksocksDashboard;
-
     @Override
     public void actionPerformed(AnActionEvent e) {
-        if (mocksocksDashboard==null){
-            mocksocksDashboard = new MocksocksDashboard();
-            mocksocksDashboard.addClosingHandler(new WindowAdapter() {
-                @Override
-                public void windowClosing(WindowEvent e) {
-                    mocksocksConfig.setProxyOn(false);
-                }
-            });
-        }
-        mocksocksConfig.setProxyOn(true);
-        mocksocksDashboard.show();
+        MocksocksDashboard mocksocksDashboard = new MocksocksDashboard();
+        mocksocksDashboard.addClosingHandler(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                mocksocksConfig.setProxyOn(false);
+            }
+        });
     }
+
 }
