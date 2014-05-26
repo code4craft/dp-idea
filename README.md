@@ -33,13 +33,4 @@ DP-IDEA
 
 关闭窗口，即可使用正常功能。
 
-### todo
-
-* 查看lion配置
-* 清除alpha和beta缓存
-* 与urlrewrite整合，URL到Action以及Action到URL的对应和跳转
-* 跳代码，dao的实现跳转到xml中
-* quick startup
-* 在gitpub中查看文件
-
 
