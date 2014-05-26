@@ -5,13 +5,13 @@ DP-IDEA
 
 ## 安装：
 
-下载[http://code.dianpingoa.com/yihua.huang/dp-idea/raw/master/dp-idea.zip](http://code.dianpingoa.com/yihua.huang/dp-idea/raw/master/dp-idea.zip)到本地，无需解压。
+下载[dp-idea.zip](dp-idea.zip)到本地，无需解压。
 
 在Intellij里选择`Settings`=>`Plugins`=>`Install Plugin From Disk`即可。
 
 安装后，点击工具栏的小黄人即可启动。
 
-![toolbar](http://code.dianpingoa.com/yihua.huang/dp-idea/raw/master/asserts/toolbar.png)
+![toolbar](asserts/toolbar.png)
 
 ## 功能：
 
@@ -25,11 +25,11 @@ DP-IDEA
 
 在初始界面，你可以查看连接，也可以按照ip地址进行筛选：
 
-![connections](http://code.dianpingoa.com/yihua.huang/dp-idea/raw/master/asserts/connections.png)
+![connections](asserts/connections.png)
 
 双击连接，可以选择查看某个特定请求：
 
-![message](http://code.dianpingoa.com/yihua.huang/dp-idea/raw/master/asserts/message.png)
+![message](asserts/message.png)
 
 关闭窗口，即可使用正常功能。
 
